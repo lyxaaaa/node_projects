@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>httpResponse</title>
+</head>
+<style>
+    table {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th {
+        padding: 20px 35px;
+    }
+    td {
+        padding: 20px 35px;
+    }
+    table tr:nth-child(odd) {
+        background-color: aliceblue;
+    }
+    table tr:nth-child(even) {
+        background-color: beige;
+    }
+</style>
+<body>
+    <table>
+        <tr>
+            <th>one</th>
+            <th>two</th>
+            <th>three</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+</body>
+<script>
+    let tds = document.querySelectorAll('td')
+    tds.forEach(item => {
+        item.onclick = function() {
+            this.style.background = 'black'
+            this.style.color = 'white'
+        }
+    })
+</script>
+</html>
