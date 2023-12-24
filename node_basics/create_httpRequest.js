@@ -17,7 +17,7 @@ const server = http.createServer((request, response) => {
     if(method=='GET' && pathname=='/login') response.end('welcome back！这是登录页面')
     else if(method=='GET' && pathname=='/register') response.end('Hello！这是注册页面')
     else if(method=='GET' && pathname=='/secret') response.end('你发现了隐藏页面')
-    else response.end('node 永远滴神')
+    else response.end('node 永远滴神!!!')
 })
 
 //监听对象 启动服务
