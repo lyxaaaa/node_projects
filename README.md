@@ -1,2 +1,2 @@
 # node_projects
-Information related to node
+Information related to node.js
