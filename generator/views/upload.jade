@@ -1,0 +1,12 @@
+extends layout 
+
+block content 
+  h1= 'Info Upload'
+  form(action='/users/upload', method='post', enctype='multipart/form-data')
+    label(for='username') Username:
+    input(type='text', name='username', id='username')
+    br
+    label(for='file') Upload File:
+    input(type='file', name='file', id='file')
+    br
+    button(type='submit') Upload
