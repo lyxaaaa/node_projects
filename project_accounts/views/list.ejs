@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>记账本</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .list-box {
+            margin: 0 auto;
+            width: 50%;
+        }
+        .list-main {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .list-item {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgb(153, 153, 153);
+            border-radius: 3px;
+            margin-bottom: 12px;
+        }
+        .item-top {
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+        .moneyInTop {
+            background-color: #def1d9;
+            color: #74876f;
+        }
+        .moneyOutTop {
+            background-color: #f3dddf;
+            color: #ab8586;
+        }
+        .item-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px 15px;
+        }
+        .list-itemName {
+            width: 40%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap; 
+        }
+        .item-content span {
+            white-space: nowrap;
+        }
+        .moneyType {
+            padding: 1px 4px;
+            font-weight: bold;
+            border-radius: 2px;
+        }
+        .moneyIn {
+            color: white;
+            background-color: #62b860;
+        }
+        .moneyOut {
+            color: white;
+            background-color: #f2ae4f;
+        }
+        .list-itemTime {
+            width: 15%;
+        }
+    </style>
+</head>
+<body>
+    <div class="list-box">
+        <h1>记账本</h1>
+        <hr>
+        <div class="list-main">
+            <div class="list-item">
+                <div class="item-top moneyInTop">
+                    <span class="top-time">2023-04-05</span>
+                </div>
+                <div class="item-content">
+                    <span class="list-itemName">今天发工资</span>
+                    <span class="moneyType moneyIn">收入</span>
+                    <span class="list-itemTime">20000元</span>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="item-top moneyOutTop">
+                    <span class="top-time">2023-12-06</span>
+                </div>
+                <div class="item-content">
+                    <span class="list-itemName">点外卖</span>
+                    <span class="moneyType moneyOut">支出</span>
+                    <span class="list-itemTime">25元</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

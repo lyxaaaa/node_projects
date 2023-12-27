@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>记账本</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .create-box {
+            margin: 0 auto;
+            width: 50%;
+        }
+        .create-main {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .create-item {
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            height: 30px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .create-btn {
+            background-color: #418cce;
+            color: white;
+            width: 100%;
+            padding: 5px 0;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .create-btn:hover {
+            background-color: #2774b8;
+        }
+    </style>
+    <!-- 引入 flatpickr 的 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <div class="create-box">
+        <h1 class="create-header">添加记录</h1>
+        <form action="/account/create" method="post">
+            <div class="create-main">
+                <div class="create-item">
+                    <label for="ItemName"><strong>事项</strong></label>
+                    <input type="text" name="ItemName" class="create-input" required>
+                </div>
+                <div class="create-item">
+                    <label for="ItemTime"><strong>发生时间</strong></label>
+                    <input type="text" name="ItemTime" class="create-input" required>
+                </div>
+                <div class="create-item">
+                    <label for="ItemType"><strong>类型</strong></label>
+                    <select type="text" name="ItemType" class="create-input">
+                        <option value="-1">支出</option>
+                        <option value="1">收入</option>
+                    </select>
+                </div>
+                <div class="create-item">
+                    <label for="ItemMoney"><strong>金额</strong></label>
+                    <input type="text" name="ItemMoney" class="create-input" required>
+                </div>
+                <div class="create-item">
+                    <label for="ItemDes"><strong>备注</strong></label>
+                    <textarea name="ItemDes" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <button class="create-btn" type="submit">添 加</button>
+        </form>
+    </div>
+</body>
+</html>
